@@ -45,6 +45,7 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -152,7 +153,11 @@ fun NewFileDialog(
                         FilterChip(
                             selected = fileExt.equals(ext, ignoreCase = true),
                             onClick = { fileExt = ext },
-                            label = { Text(".$ext") }
+                            label = { Text(".$ext") },
+                            colors = FilterChipDefaults.filterChipColors(
+                                selectedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                                selectedLabelColor = MaterialTheme.colorScheme.onSurface
+                            )
                         )
                     }
                 }
@@ -164,7 +169,11 @@ fun NewFileDialog(
                             selected = filePath == folder,
                             onClick = { filePath = folder },
                             leadingIcon = { Icon(Icons.Default.Folder, contentDescription = null, modifier = Modifier.size(14.dp)) },
-                            label = { Text(folder) }
+                            label = { Text(folder) },
+                            colors = FilterChipDefaults.filterChipColors(
+                                selectedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                                selectedLabelColor = MaterialTheme.colorScheme.onSurface
+                            )
                         )
                     }
                 }
@@ -178,6 +187,10 @@ fun NewFileDialog(
                     }
                 },
                 enabled = fileName.isNotBlank() && !isDuplicate,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.onSurface,
+                    contentColor = MaterialTheme.colorScheme.background
+                ),
                 modifier = Modifier.testTag("confirm_create_file_button")
             ) {
                 Text(strings.create)
@@ -981,7 +994,14 @@ fun SettingsDialog(
             }
         },
         confirmButton = {
-            Button(onClick = onDismiss, modifier = Modifier.testTag("close_settings_button")) {
+            Button(
+                onClick = onDismiss, 
+                modifier = Modifier.testTag("close_settings_button"),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.onSurface,
+                    contentColor = MaterialTheme.colorScheme.background
+                )
+            ) {
                 Text(strings.close)
             }
         }
