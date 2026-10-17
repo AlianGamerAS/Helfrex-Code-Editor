@@ -1,0 +1,6 @@
+{
+  "name": "Code Editor",
+  "description": "Code Editor by Helfrex Studio — a fast mobile code editor with syntax highlighting, multi-tab editing, project export, and compiler simulation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
