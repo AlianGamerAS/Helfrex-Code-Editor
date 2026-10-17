@@ -95,7 +95,7 @@ fun AppDrawerContent(
                         modifier = Modifier
                             .size(36.dp)
                             .clip(RoundedCornerShape(8.dp))
-                            .background(Color(0xFF26332A)),
+                            .background(Color(0xFF333333)),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(

@@ -793,8 +793,8 @@ fun BuildProjectDialog(
                 )
 
                 Card(
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFF101712)),
-                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF233226)),
+                    colors = CardDefaults.cardColors(containerColor = Color(0xFF181818)),
+                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF2C2C2C)),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(130.dp)
@@ -804,7 +804,7 @@ fun BuildProjectDialog(
                             Text(
                                 "Derlemeyi başlatmak için butona tıklayın.",
                                 fontSize = 11.sp,
-                                color = Color(0xFF8DA392),
+                                color = Color(0xFF9E9E9E),
                                 fontFamily = FontFamily.Monospace
                             )
                         }

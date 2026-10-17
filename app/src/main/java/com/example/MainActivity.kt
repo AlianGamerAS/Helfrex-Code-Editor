@@ -286,7 +286,7 @@ fun HelfrexApp(viewModel: EditorViewModel = viewModel()) {
                                     modifier = Modifier
                                         .size(32.dp)
                                         .clip(RoundedCornerShape(8.dp))
-                                        .background(Color(0xFF26332A)),
+                                        .background(Color(0xFF333333)),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
